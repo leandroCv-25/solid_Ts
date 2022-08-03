@@ -1,10 +1,14 @@
 import { Discount } from './discount';
 import { CartItem } from './interfaces/cart_item';
+import { ShoppingCartProtocol } from './interfaces/shopping-cart-protocol';
 
-export class ShoppingCart {
+export class ShoppingCart implements ShoppingCartProtocol {
   private readonly _items: CartItem[] = [];
 
   constructor(private readonly discount: Discount) {}
+  isEmpty(): boolean {
+    throw new Error('Method not implemented.');
+  }
 
   addItem(item: CartItem): void {
     this._items.push(item);
