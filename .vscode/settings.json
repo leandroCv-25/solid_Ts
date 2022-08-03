@@ -1,0 +1,12 @@
+{
+    "editor.fontSize": 16,
+    "window.zoomLevel": 0.1,
+    "code-runner.executorMap": {
+
+      "typescript": "npx ts-node --files --transpile-only",
+    },
+    "liveServer.settings.port": 5501,
+    "files.autoSave": "onWindowChange",
+    "eslint.format.enable": false,
+    "eslint.run": "onSave"
+  }
