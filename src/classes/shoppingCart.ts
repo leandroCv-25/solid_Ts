@@ -6,9 +6,6 @@ export class ShoppingCart implements ShoppingCartProtocol {
   private readonly _items: CartItem[] = [];
 
   constructor(private readonly discount: Discount) {}
-  isEmpty(): boolean {
-    throw new Error('Method not implemented.');
-  }
 
   addItem(item: CartItem): void {
     this._items.push(item);
@@ -32,7 +29,7 @@ export class ShoppingCart implements ShoppingCartProtocol {
     return this.discount.calculate(this.total());
   }
 
-  isEmptly(): boolean {
+  isEmpty(): boolean {
     return this._items.length === 0;
   }
 
